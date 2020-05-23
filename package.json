@@ -1,0 +1,45 @@
+{
+  "name": "bluechip-util",
+  "version": "1.0.0",
+  "description": "Utitity function package for javsacript and Typescript",
+  "main": "./lib/index.js",
+  "typings": "./lib/index",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"lib/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluechiptony/bluechip-util.git"
+  },
+  "keywords": [
+    "Utitlity",
+    "functions"
+  ],
+  "author": "Anthony Egwu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bluechiptony/bluechip-util/issues"
+  },
+  "homepage": "https://github.com/bluechiptony/bluechip-util#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.3"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
