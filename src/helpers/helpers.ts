@@ -18,7 +18,7 @@ export const isValidPhoneNumber = (phone: string): boolean => {
 };
 
 export const getDateStringFromTime = (time: number): string => {
-  let currentDate = new Date(time);
+  const currentDate = new Date(time);
   return currentDate.getDate() + '-' + (currentDate.getMonth() + 1) + '-' + currentDate.getFullYear();
 };
 
@@ -26,11 +26,11 @@ export const camelizeCase = (item: any) => {
   return CamelCaseKeys(item);
 };
 
-let arrayConjunctions = ['for', 'and', 'the', 'a', 'so', 'nor', 'or'];
+const arrayConjunctions = ['for', 'and', 'the', 'a', 'so', 'nor', 'or'];
 export const convertToNameCase = (text: string) => {
   text.replace('  ', ' ').toLowerCase();
   text = text.trim();
-  let breakText = text.split(' ');
+  const breakText = text.split(' ');
 
   for (let index = 0; index < breakText.length; index++) {
     if (!arrayConjunctions.includes(breakText[index + 1])) {
@@ -43,9 +43,9 @@ export const convertToNameCase = (text: string) => {
 export const convertWordToSentenceCase = (text: string) => {
   text = text.trim();
   text.replace('  ', ' ').toLowerCase();
-  let breakText = text.split('');
+  const breakText = text.split('');
   for (let index = 0; index < breakText.length; index++) {
-    if (index == 0) {
+    if (index === 0) {
       breakText[index] = breakText[index].toUpperCase();
     } else {
       breakText[index] = breakText[index].toLowerCase();

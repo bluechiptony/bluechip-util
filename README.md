@@ -1,4 +1,4 @@
-# Bluechip Util Package
+# Bluechip Utility Package
 
 ## The Why
 
@@ -27,20 +27,19 @@ import * as BluechipUtils from 'bluechip-utils'
 or
 
 ```
-import {isArrayContaining} from 'bluechip-utils/validators'
+import {validateRequiredProperty} from 'bluechip-utils/validators'
 
 ```
 
 Go head and use
 
 ```
-let check:boolean = isArrayContaining(array, itemTocheck);
-
-if(check){
-    //do something
-}else{
-    //fo domething else
+try{
+    validateRequiredProperty("name of key", itemTocheck);
+}catch(error){
+    //Handle case for exception
 }
+
 
 
 ```
