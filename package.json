@@ -1,5 +1,5 @@
 {
-  "name": "bluechip-util",
+  "name": "bluechip-utils",
   "version": "1.0.0",
   "description": "Utitity function package for javsacript and Typescript",
   "main": "./lib/index.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluechiptony/bluechip-util.git"
+    "url": "git+https://github.com/bluechiptony/bluechip-utils.git"
   },
   "keywords": [
     "Utitlity",
@@ -27,9 +27,9 @@
   "author": "Anthony Egwu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bluechiptony/bluechip-util/issues"
+    "url": "https://github.com/bluechiptony/bluechip-utils/issues"
   },
-  "homepage": "https://github.com/bluechiptony/bluechip-util#readme",
+  "homepage": "https://github.com/bluechiptony/bluechip-utils#readme",
   "devDependencies": {
     "@types/jest": "^25.2.3",
     "jest": "^26.0.1",
