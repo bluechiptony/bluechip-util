@@ -27,7 +27,7 @@ import * as BluechipUtils from 'bluechip-utils'
 or
 
 ```
-import {validateRequiredProperty} from 'bluechip-utils/validators'
+import {BluechipValidators} from 'bluechip-utils'
 
 ```
 
@@ -35,7 +35,7 @@ Go head and use
 
 ```
 try{
-    validateRequiredProperty("name of key", itemTocheck);
+    BluechipValidators.validateRequiredProperty("name of key", itemTocheck);
 }catch(error){
     //Handle case for exception
 }
