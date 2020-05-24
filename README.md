@@ -6,7 +6,7 @@ Just a simple utility package for Javascript/TypeScript projects
 Hope it helps with:
 
 - Validation
-- Simple me-defined custom Exceptions
+- Simple **"me-defined"** custom Exceptions
 
 ## How to use
 
