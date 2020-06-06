@@ -6,3 +6,12 @@ export interface User {
   emailAddress?: string;
   phoneNumber?: string;
 }
+
+export interface AuthenticationBooklet {
+  id?: any;
+  userCode?: any;
+  emailAddress?: string;
+  phoneNumber?: string;
+  password?: string;
+  active?: string;
+}
