@@ -2,7 +2,7 @@ import { DatabaseError, InvalidDataTypeError, RequiredPropertyError } from '..';
 
 export const makeHttpErrorFromException = (exception: Error, message?: string): AppResponse => {
   message = exception.message;
-  if (message !== null || message != undefined) {
+  if (message !== null || message !== undefined) {
     message = message;
   }
 
@@ -15,10 +15,12 @@ export const makeHttpErrorFromException = (exception: Error, message?: string): 
 };
 
 export const makeHttpResponse = (statusCode: number, data: any): AppResponse => {
-  return {
+  const a: AppResponse = {
     statusCode: statusCode,
     data: data,
   };
+
+  return a;
 };
 
 export const createMessageResponse = (message: string) => {
