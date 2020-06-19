@@ -1,7 +1,7 @@
 import * as CamelCaseKeys from 'camelcase-keys';
 
 export const adaptExpressRequest = (req: any): AppAdaptedRequest => {
-  let adaptRequest: AppAdaptedRequest = {
+  const adaptRequest: AppAdaptedRequest = {
     path: req.path,
     method: req.method,
     pathParams: req.params,
