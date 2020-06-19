@@ -14,21 +14,6 @@ export const makeHttpErrorFromException = (exception: Error, message?: string): 
   return response;
 };
 
-export const makeHttpResponse = (statusCode: number, data: any): AppResponse => {
-  const a: AppResponse = {
-    statusCode: statusCode,
-    data: data,
-  };
-
-  return a;
-};
-
-export const createMessageResponse = (message: string) => {
-  return {
-    message: message,
-  };
-};
-
 export const getStatusCodeFromException = (e: Error): number => {
   let statusCode = 500;
 
