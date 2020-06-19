@@ -1,14 +1,13 @@
 import { DatabaseError, InvalidDataTypeError, RequiredPropertyError } from '..';
 
 export const makeHttpErrorFromException = (exception: Error, message?: string): AppResponse => {
-  let statusCode = getStatusCodeFromException(exception);
   message = exception.message;
-  if (message != null || message != undefined) {
+  if (message !== null || message != undefined) {
     message = message;
   }
 
-  let response: AppResponse = {
-    statusCode: statusCode,
+  const response: AppResponse = {
+    statusCode: getStatusCodeFromException(exception),
     data: message,
   };
 
