@@ -1,5 +1,18 @@
 import * as CamelCaseKeys from 'camelcase-keys';
 
+export const adaptExpressRequest = (req: any): AppAdaptedRequest => {
+  let adaptRequest: AppAdaptedRequest = {
+    path: req.path,
+    method: req.method,
+    pathParams: req.params,
+    queryParams: req.query,
+    body: req.body,
+    user: req.user || {},
+  };
+
+  return adaptRequest;
+};
+
 export const upperFirstCharacter = (word: string): string => {
   if (word.length === 1) {
     return word.toUpperCase();
@@ -53,3 +66,12 @@ export const convertWordToSentenceCase = (text: string) => {
   }
   return breakText.join('');
 };
+
+export interface AppAdaptedRequest {
+  path: any;
+  method: any;
+  pathParams: any;
+  queryParams: any;
+  body: any;
+  user: any;
+}
