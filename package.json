@@ -46,6 +46,7 @@
     "lib/**/*"
   ],
   "dependencies": {
-    "camelcase-keys": "^6.2.2"
+    "camelcase-keys": "^6.2.2",
+    "neat-csv": "^5.2.0"
   }
 }
