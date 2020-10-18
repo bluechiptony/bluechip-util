@@ -31,7 +31,25 @@ import {BluechipValidators} from 'bluechip-utils'
 
 ```
 
+or
+
+```
+import {validateRequiredProperty} from 'bluechip-utils'
+
+```
+
 Go head and use
+
+```
+try{
+    validateRequiredProperty("name of key", itemTocheck);
+}catch(error){
+    //Handle case for exception
+}
+
+```
+
+or
 
 ```
 try{
@@ -39,7 +57,5 @@ try{
 }catch(error){
     //Handle case for exception
 }
-
-
 
 ```
