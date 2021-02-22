@@ -2,6 +2,20 @@ import * as CamelCaseKeys from 'camelcase-keys';
 import { readFileSync, createReadStream } from 'fs';
 const neatCsv = require('neat-csv');
 import { v4 as uuidv4 } from 'uuid';
+import { customAlphabet } from 'nanoid';
+import { lowercase, uppercase, numbers } from 'nanoid-dictionary';
+// import generate from "nano";
+
+/**
+ * Generates unique code
+ * @param length Length of unique code
+ * @param isUppercase - Whether the string returned should be uppercase
+ * @returns Generated string
+ */
+export const generateUniqueCode = (length: number, isUppercase?: boolean): string => {
+  const nans = customAlphabet(lowercase + uppercase + numbers, length);
+  return isUppercase ? nans().toUpperCase() : nans();
+};
 
 export const readCsvFile = async (url: string): Promise<Object[]> => {
   try {
