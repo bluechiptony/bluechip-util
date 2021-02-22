@@ -15,7 +15,7 @@ export const makeHttpErrorFromException = (exception: Error, message?: string): 
   return response;
 };
 
-export const getMessagFromException = (exception: Error, message?: string): string => {
+export const getMessageFromException = (exception: Error, message?: string): string => {
   message = exception.message;
   if (message !== null || message !== undefined) {
     message = message;
