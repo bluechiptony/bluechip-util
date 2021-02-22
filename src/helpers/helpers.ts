@@ -1,6 +1,7 @@
 import * as CamelCaseKeys from 'camelcase-keys';
 import { readFileSync, createReadStream } from 'fs';
 const neatCsv = require('neat-csv');
+import { v4 as uuidv4 } from 'uuid';
 
 export const readCsvFile = async (url: string): Promise<Object[]> => {
   try {
@@ -13,6 +14,10 @@ export const readCsvFile = async (url: string): Promise<Object[]> => {
   } catch (error) {
     throw new Error('Error parsing file');
   }
+};
+
+export const generateUUID = (): string => {
+  return uuidv4();
 };
 
 export const adaptExpressRequest = (req: any): AppAdaptedRequest => {
