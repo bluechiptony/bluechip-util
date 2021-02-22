@@ -23,5 +23,10 @@ export {
 } from './helpers/helpers';
 export * from './responses/responses';
 export { DatabaseError } from './exceptions/database';
-export { InvalidDataTypeError } from './exceptions/data';
+export {
+  InvalidDataTypeError,
+  ApplicationProcessError,
+  AuthenticationError,
+  AuthorizationError,
+} from './exceptions/data';
 export { RequiredPropertyError } from './exceptions/property';
