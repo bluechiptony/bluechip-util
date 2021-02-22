@@ -1,6 +1,6 @@
 {
   "name": "bluechip-utils",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Utitity function package for javsacript and Typescript",
   "main": "./lib/index.js",
   "typings": "./lib/index",
