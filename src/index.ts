@@ -20,6 +20,8 @@ export {
   convertToNameCase,
   convertWordToSentenceCase,
   AppAdaptedRequest,
+  shuffleArray,
+  splitArrayIntochunks,
 } from './helpers/helpers';
 export * from './responses/responses';
 export { DatabaseError } from './exceptions/database';

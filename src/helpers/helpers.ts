@@ -101,6 +101,24 @@ export const convertWordToSentenceCase = (text: string) => {
   return breakText.join('');
 };
 
+// program to split array into smaller chunks
+
+export function splitArrayIntochunks(arr: any[], chunk: number): any[] {
+  let chunkArray: any[] = [];
+  for (let i = 0; i < arr.length; i += chunk) {
+    chunkArray.push(arr.slice(i, i + chunk));
+  }
+  return chunkArray;
+}
+
+export const shuffleArray = (array: any[]) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
 export interface AppAdaptedRequest {
   path: any;
   method: any;
